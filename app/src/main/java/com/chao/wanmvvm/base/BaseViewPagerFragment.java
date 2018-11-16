@@ -12,13 +12,14 @@ import com.chao.wanmvvm.R;
 import com.chao.wanmvvm.adapter.ViewPagerAdapter;
 import com.chao.wanmvvm.widget.NestedViewPager;
 import com.flyco.tablayout.SlidingTabLayout;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author：tqzhang on 18/8/1 10:43
+ * Date: 2018/11/16 12:56
+ * Author: hansyang
+ * Description:
  */
 public abstract class BaseViewPagerFragment<T extends AbsViewModel> extends AbsLifecycleFragment<T> {
 

@@ -1,4 +1,4 @@
-package com.chao.http;
+package com.chao.mvvm.http;
 
 import com.chao.mvvm.util.Logger;
 import okhttp3.logging.HttpLoggingInterceptor;

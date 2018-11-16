@@ -1,7 +1,9 @@
 package com.chao.wanmvvm.network;
 
 /**
- * @author：tqzhang  on 18/4/19 11:08
+ * Date: 2018/11/16 12:56
+ * Author: hansyang
+ * Description:
  */
 public class ServerException extends RuntimeException {
     public String message;

@@ -1,4 +1,4 @@
-package com.chao.http;
+package com.chao.mvvm.http;
 
 import android.content.Context;
 import okhttp3.Cache;
@@ -71,7 +71,7 @@ public class HttpHelper {
          * @return Builder
          */
         public Builder initOkHttp() {
-            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new HttpLogger());
+            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new com.chao.http.HttpLogger());
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             if (mBuilder == null) {
                 synchronized (HttpHelper.class) {

@@ -18,7 +18,9 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * @author：tqzhang on 18/7/10 16:20
+ * Date: 2018/11/16 12:56
+ * Author: hansyang
+ * Description:
  */
 public abstract class BaseListFragment<T extends AbsViewModel> extends AbsLifecycleFragment<T> implements OnRefreshListener {
     protected TRecyclerView mRecyclerView;

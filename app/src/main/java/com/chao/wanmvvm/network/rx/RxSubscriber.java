@@ -26,7 +26,7 @@ public abstract class RxSubscriber<T> extends DisposableSubscriber<T> {
     protected void onStart() {
         super.onStart();
         showLoading();
-        if (!NetworkUtils.isNetworkAvailable(App.instance())) {
+        if (!NetworkUtils.isNetworkAvailable(App.Companion.instance())) {
             onNoNetWork();
             cancel();
             return;

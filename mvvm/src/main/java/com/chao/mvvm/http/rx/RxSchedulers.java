@@ -1,4 +1,4 @@
-package com.chao.http.rx;
+package com.chao.mvvm.http.rx;
 
 import io.reactivex.*;
 import io.reactivex.android.schedulers.AndroidSchedulers;
