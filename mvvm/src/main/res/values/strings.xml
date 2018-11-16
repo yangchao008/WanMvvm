@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">mvvm</string>
+
+    <string name="network_is_bad">网络不给力～_~</string>
+    <string name="server_error">服务器异常</string>
+</resources>
