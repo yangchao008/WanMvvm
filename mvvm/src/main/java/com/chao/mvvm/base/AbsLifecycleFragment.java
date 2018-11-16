@@ -87,12 +87,10 @@ public abstract class AbsLifecycleFragment<T extends AbsViewModel> extends BaseF
         return LiveBus.getDefault().subscribe(eventKey, tag, tClass);
     }
 
-
     @Override
     protected void onStateRefresh() {
         showLoading();
     }
-
 
     /**
      * 获取网络数据
@@ -123,9 +121,9 @@ public abstract class AbsLifecycleFragment<T extends AbsViewModel> extends BaseF
         public void onChanged(@Nullable String state) {
             if (!TextUtils.isEmpty(state)) {
                 if (StateConstants.ERROR_STATE.equals(state)) {
-                    showError(ErrorState.class, "2");
+                    showError(ErrorState.class, StateConstants.ERROR_STATE);
                 } else if (StateConstants.NET_WORK_STATE.equals(state)) {
-                    showError(ErrorState.class, "1");
+                    showError(ErrorState.class, StateConstants.NET_WORK_STATE);
                 } else if (StateConstants.LOADING_STATE.equals(state)) {
                     showLoading();
                 } else if (StateConstants.SUCCESS_STATE.equals(state)) {
