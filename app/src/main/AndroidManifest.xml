@@ -20,7 +20,7 @@
         </activity>
 
         <meta-data
-                android:name="com.chao.wanmvvm.glide.GlideConfig"
+                android:name="com.chao.common.glide.GlideConfig"
                 android:value="GlideModule" />
     </application>
 

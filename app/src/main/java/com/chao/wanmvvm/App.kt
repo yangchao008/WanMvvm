@@ -5,10 +5,10 @@ import android.content.ComponentCallbacks2
 import android.content.Context
 import android.support.multidex.MultiDex
 import com.bumptech.glide.Glide
+import com.chao.common.network.URL
 import com.chao.mvvm.http.HttpHelper
 import com.chao.mvvm.stateview.ErrorState
 import com.chao.mvvm.stateview.LoadingState
-import com.chao.wanmvvm.config.URL
 import com.tqzhang.stateview.core.LoadState
 
 /**

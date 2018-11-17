@@ -8,10 +8,8 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-
 import java.io.File;
 import java.util.concurrent.TimeUnit;
-
 import static com.chao.mvvm.util.TUtil.checkNotNull;
 
 /**
@@ -71,7 +69,7 @@ public class HttpHelper {
          * @return Builder
          */
         public Builder initOkHttp() {
-            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new com.chao.http.HttpLogger());
+            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new HttpLogger());
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             if (mBuilder == null) {
                 synchronized (HttpHelper.class) {
