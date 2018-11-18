@@ -1,9 +1,9 @@
 package com.chao.wanmvvm.model;
 
-import com.chao.common.network.ApiService;
 import com.chao.mvvm.base.AbsRepository;
 import com.chao.mvvm.event.LiveBus;
 import com.chao.mvvm.http.HttpHelper;
+import com.chao.wanmvvm.network.ApiService;
 
 /**
  * @author：tqzhang on 18/7/26 16:15
