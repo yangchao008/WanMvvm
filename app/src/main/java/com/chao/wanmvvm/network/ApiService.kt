@@ -7,4 +7,7 @@ package com.chao.wanmvvm.network
  */
 interface ApiService{
 
+//    @GET(URL.HOME_CHAPTER)
+//    @FormUrlEncoded
+
 }

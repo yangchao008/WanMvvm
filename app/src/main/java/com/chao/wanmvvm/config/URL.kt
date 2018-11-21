@@ -7,6 +7,7 @@ package com.chao.wanmvvm.config
  */
 object URL {
 
-    const val BASE_URL = "https://api.meiyuanbang.com/"
+    const val BASE_URL = "http://wanandroid.com/wxarticle/"
+    const val HOME_CHAPTER = "chapters/json "
 
 }
