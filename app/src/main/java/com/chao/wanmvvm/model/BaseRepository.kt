@@ -2,7 +2,7 @@ package com.chao.wanmvvm.model
 
 import com.chao.mvvm.base.AbsRepository
 import com.chao.mvvm.event.LiveBus
-import com.chao.mvvm.http.HttpHelper
+import com.chao.mvvm.http.RetrofitFactory
 import com.chao.wanmvvm.network.ApiService
 
 /**
@@ -14,7 +14,7 @@ class BaseRepository : AbsRepository() {
 
     init {
         if (null == apiService) {
-            apiService = HttpHelper.getInstance().create(ApiService::class.java)
+            apiService = RetrofitFactory.getInstance().create(ApiService::class.java)
         }
     }
 

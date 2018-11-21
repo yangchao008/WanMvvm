@@ -3,7 +3,7 @@
     android:id="@+id/rl_title_bar"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:background="#F9F9F9"
+    android:background="#3F51B5"
     android:visibility="gone">
 
     <ImageView
@@ -36,7 +36,7 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/list_margin_size"
-        android:src="@mipmap/search"
+        android:src="@drawable/search"
         android:visibility="invisible" />
 
     <TextView

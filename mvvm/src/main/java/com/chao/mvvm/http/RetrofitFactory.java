@@ -17,9 +17,9 @@ import static com.chao.mvvm.util.TUtil.checkNotNull;
  * Author: hansyang
  * Description:
  */
-public class HttpHelper {
+public class RetrofitFactory {
 
-    private static volatile HttpHelper sInstance = null;
+    private static volatile RetrofitFactory sInstance = null;
 
     private static OkHttpClient sOkHttpClient;
 
@@ -29,14 +29,14 @@ public class HttpHelper {
 
     private static String BASE_URL;
 
-    private HttpHelper(){
+    private RetrofitFactory(){
     }
 
-    public static HttpHelper getInstance(){
+    public static RetrofitFactory getInstance(){
         if (sInstance == null){
-            synchronized (HttpHelper.class){
+            synchronized (RetrofitFactory.class){
                 if (sInstance == null){
-                    sInstance = new HttpHelper();
+                    sInstance = new RetrofitFactory();
                 }
             }
         }
@@ -44,7 +44,7 @@ public class HttpHelper {
     }
 
     public static void init(Context context,String baseUrl){
-        new HttpHelper.Builder(context)
+        new RetrofitFactory.Builder(context)
                 .initOkHttp()
                 .createRetrofit(baseUrl)
                 .build();
@@ -72,7 +72,7 @@ public class HttpHelper {
             HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new HttpLogger());
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             if (mBuilder == null) {
-                synchronized (HttpHelper.class) {
+                synchronized (RetrofitFactory.class) {
                     if (mBuilder == null) {
                         Cache cache = new Cache(new File(mContext.getCacheDir(), "HttpCache"), 1024 * 1024 * 10);
                         mBuilder = new OkHttpClient.Builder()
@@ -119,7 +119,7 @@ public class HttpHelper {
         }
 
         public void build() {
-            HttpHelper.getInstance().build(this);
+            RetrofitFactory.getInstance().build(this);
         }
 
     }
