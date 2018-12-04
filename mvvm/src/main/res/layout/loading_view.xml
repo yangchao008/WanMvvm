@@ -13,7 +13,7 @@
                 android:id="@+id/progress_bar"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:progressDrawable="@drawable/icon_loading" />
+                android:progressDrawable="@drawable/progressbar" />
     </LinearLayout>
 
 </RelativeLayout>

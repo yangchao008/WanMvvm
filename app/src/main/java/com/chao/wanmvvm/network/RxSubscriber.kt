@@ -33,7 +33,7 @@ abstract class RxSubscriber<T> : DisposableSubscriber<T>() {
 
     }
 
-    fun onNoNetWork() {
+    open fun onNoNetWork() {
 
     }
 

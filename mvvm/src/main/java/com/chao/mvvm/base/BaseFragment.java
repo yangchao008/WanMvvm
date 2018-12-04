@@ -38,7 +38,7 @@ public abstract class BaseFragment extends Fragment {
                     }
                 }).build();
         initView(savedInstanceState);
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return rootView;
     }
 
     @Override

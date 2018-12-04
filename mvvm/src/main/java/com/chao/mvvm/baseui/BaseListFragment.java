@@ -10,10 +10,10 @@ import com.chao.mvvm.R;
 import com.chao.mvvm.base.AbsLifecycleFragment;
 import com.chao.mvvm.base.AbsViewModel;
 import com.trecyclerview.TRecyclerView;
+import com.trecyclerview.adapter.DelegateAdapter;
 import com.trecyclerview.adapter.ItemData;
 import com.trecyclerview.listener.OnRefreshListener;
 import com.trecyclerview.listener.OnScrollStateListener;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -31,9 +31,11 @@ public abstract class BaseListFragment<T extends AbsViewModel> extends AbsLifecy
 
     protected RecyclerView.LayoutManager layoutManager;
 
-    protected RecyclerView.Adapter adapter;
+    protected DelegateAdapter adapter;
 
     protected String lastId = null;
+
+    protected int page = 1;
 
     protected boolean isLoadMore = true;
 
@@ -150,7 +152,7 @@ public abstract class BaseListFragment<T extends AbsViewModel> extends AbsLifecy
      *
      * @return DelegateAdapter
      */
-    protected abstract RecyclerView.Adapter createAdapter();
+    protected abstract DelegateAdapter createAdapter();
 
     /**
      * LayoutManager
@@ -164,7 +166,6 @@ public abstract class BaseListFragment<T extends AbsViewModel> extends AbsLifecy
         mTitleBar.setVisibility(View.VISIBLE);
         mTitle.setText(titleName);
     }
-
 
     /**
      * 获取更多网络数据t
