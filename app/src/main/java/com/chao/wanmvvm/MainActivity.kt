@@ -14,8 +14,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : BaseActivity() {
 
     val mFragments = listOf(
-        ChapterFragment(),
         BlankFragment(),
+        ChapterFragment(),
         BlankFragment(),
         BlankFragment(),
         BlankFragment())
