@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter
 import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.ashokvarma.bottomnavigation.BottomNavigationItem
 import com.chao.mvvm.base.BaseActivity
+import com.chao.mvvm.base.BlankFragment
 import com.chao.wanmvvm.view.chapter.ChapterFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -14,10 +15,10 @@ class MainActivity : BaseActivity() {
 
     val mFragments = listOf(
         ChapterFragment(),
-        ChapterFragment(),
-        ChapterFragment(),
-        ChapterFragment(),
-        ChapterFragment())
+        BlankFragment(),
+        BlankFragment(),
+        BlankFragment(),
+        BlankFragment())
 
     override fun getLayoutId(): Int {
         return R.layout.activity_main
@@ -29,6 +30,7 @@ class MainActivity : BaseActivity() {
             adapter = MyFragmentPagerAdapter(supportFragmentManager)
             currentItem = 0
             isLocked = true
+            offscreenPageLimit = 5
         }
         initBottomNavigationBar()
     }

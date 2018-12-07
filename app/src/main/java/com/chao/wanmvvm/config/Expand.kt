@@ -6,6 +6,7 @@ import android.text.Html.FROM_HTML_MODE_COMPACT
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.Toast
 
 /**
  * author：  HyZhan
@@ -39,6 +40,10 @@ fun String.toHtml(): String {
         Html.fromHtml(this).toString()
     }
 }
+
+fun Context.showShortToast(msg: String) = Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
+
+fun Context.showLongToast(msg: String) = Toast.makeText(this,msg,Toast.LENGTH_LONG).show()
 
 //fun ImageView.loadUrl(context: Context, url: String) {
 //

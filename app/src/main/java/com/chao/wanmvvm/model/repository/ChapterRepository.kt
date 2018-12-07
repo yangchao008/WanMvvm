@@ -24,8 +24,7 @@ class ChapterRepository : BaseRepository(){
                 }
 
                 override fun onSuccess(t: ChaptersResult) {
-                    showPageState(Constants.EVENT_KEY_CHAPTER_STATE, StateConstants.SUCCESS_STATE)
-                    sendData(Constants.EVENT_KEY_CHAPTER,t)
+                    sendSuccessData(Constants.EVENT_KEY_CHAPTER_STATE,Constants.EVENT_KEY_CHAPTER,t)
                 }
 
                 override fun onFailure(msg: String?) {
@@ -45,8 +44,7 @@ class ChapterRepository : BaseRepository(){
                 }
 
                 override fun onSuccess(t: ChapterListResult) {
-                    showPageState(Constants.EVENT_KEY_CHAPTER_LIST_STATE, StateConstants.SUCCESS_STATE)
-                    sendData(Constants.EVENT_KEY_CHAPTER_LIST,chapterId,t)
+                    sendSuccessData(Constants.EVENT_KEY_CHAPTER_LIST_STATE,Constants.EVENT_KEY_CHAPTER_LIST,chapterId,t)
                 }
 
                 override fun onFailure(msg: String?) {

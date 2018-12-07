@@ -4,6 +4,7 @@ import android.arch.lifecycle.Observer
 import android.os.Bundle
 import com.chao.mvvm.base.BaseFragment
 import com.chao.mvvm.baseui.BaseViewPagerFragment
+import com.chao.wanmvvm.R
 import com.chao.wanmvvm.config.Constants
 import com.chao.wanmvvm.model.bean.chapter.ChaptersResult
 import com.chao.wanmvvm.viewmodel.ChapterViewModel
@@ -17,6 +18,7 @@ class ChapterFragment : BaseViewPagerFragment<ChapterViewModel>(){
 
     override fun initView(state: Bundle?) {
         super.initView(state)
+        setTitle(getString(R.string.wechat))
         getTabData()
     }
 

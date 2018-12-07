@@ -3,6 +3,7 @@ package com.chao.wanmvvm.model
 import com.chao.mvvm.base.AbsRepository
 import com.chao.mvvm.event.LiveBus
 import com.chao.mvvm.http.RetrofitFactory
+import com.chao.mvvm.stateview.StateConstants
 import com.chao.wanmvvm.network.ApiService
 
 /**
@@ -14,27 +15,30 @@ open class BaseRepository : AbsRepository() {
         RetrofitFactory.getInstance().create(ApiService::class.java)
     }
 
-//    init {
-//        if (null == apiService) {
-//            apiService = RetrofitFactory.getInstance().create(ApiService::class.java)
-//        }
-//    }
-
-    protected fun sendData(eventKey: Any, t: Any) {
+    private fun sendData(eventKey: Any, t: Any) {
         sendData(eventKey, null, t)
     }
 
-    protected fun sendData(eventKey: Any, tag: String?, t: Any) {
+    private fun sendData(eventKey: Any, tag: String?, t: Any) {
         LiveBus.getDefault().postEvent(eventKey, tag, t)
     }
 
-    protected fun showPageState(eventKey: Any, state: String) {
+    fun showPageState(eventKey: Any, state: String) {
         sendData(eventKey, state)
     }
 
-    protected fun showPageState(eventKey: Any, tag: String, state: String) {
+    private fun showPageState(eventKey: Any, tag: String, state: String) {
         sendData(eventKey, tag, state)
     }
 
+    fun sendSuccessData(eventKeyState: Any,eventKey: Any,t: Any) {
+        showPageState(eventKeyState, StateConstants.SUCCESS_STATE)
+        sendData(eventKey,t)
+    }
+
+    fun sendSuccessData(eventKeyState: Any,eventKey: Any, tag: String, t: Any) {
+        showPageState(eventKeyState,tag, StateConstants.SUCCESS_STATE)
+        sendData(eventKey,tag,t)
+    }
 
 }

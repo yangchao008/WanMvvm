@@ -7,10 +7,10 @@ import android.util.Log;
  */
 public class Logger {
 
-    public static void e(String tag, String msg) {
+    public static void d(String tag, String msg) {
         int max_str_length = 2001 - tag.length();
         while (msg.length() > max_str_length) {
-            Log.e(tag, msg.substring(0, max_str_length));
+            Log.d(tag, msg.substring(0, max_str_length));
             msg = msg.substring(max_str_length);
         }
         Log.d(tag, msg);

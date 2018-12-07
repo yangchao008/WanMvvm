@@ -10,6 +10,7 @@ import com.chao.wanmvvm.config.Constants
 import com.chao.wanmvvm.model.bean.chapter.ChapterListResult
 import com.chao.wanmvvm.viewmodel.ChapterViewModel
 import com.trecyclerview.adapter.DelegateAdapter
+import zqx.rj.com.mvvm.common.showShortToast
 
 /**
  * Date: 2018/12/4 14:53
@@ -36,7 +37,7 @@ class ChapterListFragment : BaseListFragment<ChapterViewModel>(){
     }
 
     override fun getStateEventKey(): Any {
-        return Constants.EVENT_KEY_CHAPTER_LIST
+        return Constants.EVENT_KEY_CHAPTER_LIST_STATE
     }
 
     override fun getStateEventTag(): String {
@@ -44,7 +45,7 @@ class ChapterListFragment : BaseListFragment<ChapterViewModel>(){
     }
 
     override fun dataObserver() {
-        arguments?.let {
+        arguments?.apply {
             chapterId = arguments!!.getString(CHAPTER_ID)
         }
         registerObserver(Constants.EVENT_KEY_CHAPTER_LIST,chapterId,ChapterListResult::class.java)
@@ -58,6 +59,9 @@ class ChapterListFragment : BaseListFragment<ChapterViewModel>(){
     override fun createAdapter(): DelegateAdapter {
         return AdapterPool.newInstance()
             .getChapterAdapter(activity!!)
+            .setOnItemClickListener { view, i, any ->
+                activity!!.showShortToast("click item = $i")
+            }
             .build()
     }
 
