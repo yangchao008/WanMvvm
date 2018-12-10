@@ -44,7 +44,7 @@ class ChapterFragment : BaseViewPagerFragment<ChapterViewModel>(){
         mArrTitles = arrayOfNulls<String>(result.data!!.size)
         result.data?.forEachIndexed { index, dataItem ->
             mArrTitles[index] = dataItem.name
-            mFragments.add(ChapterListFragment.newInstance(dataItem.id.toString()))
+            mFragments.add(ChapterListSimpleFragment.newInstance(dataItem.id.toString()))
         }
         setAdapter()
     }

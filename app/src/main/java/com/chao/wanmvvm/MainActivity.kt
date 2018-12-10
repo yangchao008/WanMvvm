@@ -30,7 +30,7 @@ class MainActivity : BaseActivity() {
             adapter = MyFragmentPagerAdapter(supportFragmentManager)
             currentItem = 0
             isLocked = true
-            offscreenPageLimit = 5
+            offscreenPageLimit = mFragments.size
         }
         initBottomNavigationBar()
     }
