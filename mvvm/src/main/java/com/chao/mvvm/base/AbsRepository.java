@@ -5,7 +5,7 @@ import io.reactivex.disposables.Disposable;
 
 /**
  * Date: 2018/11/15 21:53
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 public abstract class AbsRepository {

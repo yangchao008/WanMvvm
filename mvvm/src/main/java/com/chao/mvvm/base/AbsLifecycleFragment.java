@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * Date: 2018/11/16 18:42
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 public abstract class AbsLifecycleFragment<T extends AbsViewModel> extends BaseFragment {

@@ -15,7 +15,7 @@ import com.tqzhang.stateview.stateview.BaseStateControl;
 
 /**
  * Date: 2018/11/16 12:56
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 public abstract class AbsLifecycleActivity<T extends AbsViewModel> extends BaseActivity {

@@ -13,7 +13,7 @@ import com.tqzhang.stateview.core.LoadState
 
 /**
  * Date: 2018/11/15 21:16
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 class App : Application(), ComponentCallbacks2 {
@@ -53,8 +53,6 @@ class App : Application(), ComponentCallbacks2 {
     companion object {
         var mInstance: App? = null
 
-        fun instance(): App {
-            return mInstance!!
-        }
+        fun instance(): App = mInstance!!
     }
 }

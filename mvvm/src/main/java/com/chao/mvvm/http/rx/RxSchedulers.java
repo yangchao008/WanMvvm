@@ -7,7 +7,7 @@ import org.reactivestreams.Publisher;
 
 /**
  * Date: 2018/11/15 21:16
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 public class RxSchedulers {

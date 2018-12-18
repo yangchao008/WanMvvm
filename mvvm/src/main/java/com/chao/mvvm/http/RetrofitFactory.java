@@ -14,7 +14,7 @@ import static com.chao.mvvm.util.TUtil.checkNotNull;
 
 /**
  * Date: 2018/11/15 21:16
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 public class RetrofitFactory {

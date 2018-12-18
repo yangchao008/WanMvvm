@@ -2,7 +2,7 @@ package com.chao.wanmvvm.config
 
 /**
  * Date: 2018/11/16 12:56
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 object URL {

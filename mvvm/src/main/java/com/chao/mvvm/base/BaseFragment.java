@@ -14,7 +14,7 @@ import com.tqzhang.stateview.stateview.BaseStateControl;
 
 /**
  * Date: 2018/11/16 18:32
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 public abstract class BaseFragment extends Fragment {

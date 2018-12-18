@@ -12,7 +12,7 @@ import static com.chao.mvvm.stateview.StateConstants.NET_WORK_STATE;
 
 /**
  * Date: 2018/11/15 16:31
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 public class ErrorState extends BaseStateControl {

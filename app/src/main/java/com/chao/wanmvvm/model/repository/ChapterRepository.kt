@@ -10,7 +10,7 @@ import com.chao.wanmvvm.network.RxSubscriber
 
 /**
  * Date: 2018/12/4 12:32
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 class ChapterRepository : BaseRepository(){

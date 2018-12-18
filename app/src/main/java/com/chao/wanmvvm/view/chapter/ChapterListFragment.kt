@@ -14,7 +14,7 @@ import zqx.rj.com.mvvm.common.showShortToast
 
 /**
  * Date: 2018/12/4 14:53
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 class ChapterListFragment : BaseListFragment<ChapterViewModel>(){

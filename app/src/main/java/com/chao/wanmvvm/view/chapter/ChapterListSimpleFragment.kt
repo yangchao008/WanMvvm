@@ -17,7 +17,7 @@ import zqx.rj.com.mvvm.common.toHtml
 
 /**
  * Date: 2018/12/4 14:53
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 class ChapterListSimpleFragment : BaseListSimpleFragment<ChapterViewModel>(){
@@ -78,13 +78,15 @@ class ChapterListSimpleFragment : BaseListSimpleFragment<ChapterViewModel>(){
 
     inner class MyAdapter(resId: Int) : BaseQuickAdapter<DatasItem, BaseViewHolder>(resId){
         override fun convert(helper: BaseViewHolder?, item: DatasItem?) {
-            helper?.let {
-                it.setText(R.id.mTvAuthor, item?.author)
-                it.setText(R.id.mTvTitle, item?.title?.toHtml())
-                it.setText(R.id.mTvCategory, category(item))
-                it.setText(R.id.mTvTime, item?.niceDate)
-                it.setImageResource(R.id.mIvLove, isCollect(item))
-                it.addOnClickListener(R.id.mIvLove)
+            helper?.apply {
+                with(item!!){
+                    setText(R.id.mTvAuthor, author)
+                    setText(R.id.mTvTitle, title?.toHtml())
+                    setText(R.id.mTvCategory, category(item))
+                    setText(R.id.mTvTime, niceDate)
+                    setImageResource(R.id.mIvLove, isCollect(item))
+                    addOnClickListener(R.id.mIvLove)
+                }
             }
         }
 

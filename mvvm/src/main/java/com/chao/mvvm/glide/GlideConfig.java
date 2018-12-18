@@ -11,7 +11,7 @@ import com.bumptech.glide.module.GlideModule;
 
 /**
  * Date: 2018/11/16 12:56
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 public class GlideConfig implements GlideModule {

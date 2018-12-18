@@ -11,7 +11,7 @@ import com.chao.wanmvvm.viewmodel.ChapterViewModel
 
 /**
  * Date: 2018/12/4 14:20
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 class ChapterFragment : BaseViewPagerFragment<ChapterViewModel>(){

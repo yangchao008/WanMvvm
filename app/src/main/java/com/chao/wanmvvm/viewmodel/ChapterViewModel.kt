@@ -6,7 +6,7 @@ import com.chao.wanmvvm.model.repository.ChapterRepository
 
 /**
  * Date: 2018/12/4 13:04
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 class ChapterViewModel(application : Application) : AbsViewModel<ChapterRepository>(application){

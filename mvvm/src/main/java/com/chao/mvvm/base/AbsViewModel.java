@@ -7,7 +7,7 @@ import com.chao.mvvm.util.TUtil;
 
 /**
  * Date: 2018/11/16 12:41
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 public class AbsViewModel<T extends AbsRepository> extends AndroidViewModel {

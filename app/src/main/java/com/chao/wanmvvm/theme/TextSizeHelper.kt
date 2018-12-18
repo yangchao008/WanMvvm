@@ -2,7 +2,7 @@ package com.chao.wanmvvm.theme
 
 /**
  * Date: 2018/11/19 18:32
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 object TextSizeHelper{

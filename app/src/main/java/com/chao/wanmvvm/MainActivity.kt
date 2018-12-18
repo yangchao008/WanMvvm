@@ -11,6 +11,11 @@ import com.chao.mvvm.base.BlankFragment
 import com.chao.wanmvvm.view.chapter.ChapterFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * Date: 2018/11/19 18:32
+ * Author: hans yang
+ * Description:
+ */
 class MainActivity : BaseActivity() {
 
     val mFragments = listOf(

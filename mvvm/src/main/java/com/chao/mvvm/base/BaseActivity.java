@@ -9,7 +9,7 @@ import com.tqzhang.stateview.stateview.BaseStateControl;
 
 /**
  * Date: 2018/11/16 12:49
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 public abstract class BaseActivity extends AppCompatActivity {

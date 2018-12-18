@@ -5,7 +5,7 @@ import com.chao.wanmvvm.R
 
 /**
  * Date: 2018/11/19 18:32
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 object TextColorHelper{

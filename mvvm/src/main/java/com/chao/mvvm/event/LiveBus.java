@@ -11,7 +11,7 @@ import static com.chao.mvvm.util.TUtil.checkNotNull;
 
 /**
  * Date: 2018/11/15 17:08
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 public class LiveBus {

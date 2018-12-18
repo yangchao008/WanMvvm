@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * Date: 2018/11/16 12:56
- * Author: hansyang
+ * Author: hans yang
  * Description:
  */
 public abstract class BaseViewPagerFragment<T extends AbsViewModel> extends AbsLifecycleFragment<T> {
