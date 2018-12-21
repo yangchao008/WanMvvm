@@ -1,4 +1,4 @@
-package com.chao.wanmvvm.view.home
+package com.chao.wanmvvm.mvvm.view.home
 
 /**
  * Date: 2018/11/20 12:44

@@ -1,4 +1,4 @@
-package com.chao.wanmvvm.model.bean.chapter
+package com.chao.wanmvvm.mvvm.model.bean.chapter
 
 
 import com.google.gson.annotations.SerializedName

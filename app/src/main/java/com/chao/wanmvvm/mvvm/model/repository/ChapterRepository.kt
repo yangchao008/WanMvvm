@@ -1,11 +1,11 @@
-package com.chao.wanmvvm.model.repository
+package com.chao.wanmvvm.mvvm.model.repository
 
 import com.chao.mvvm.http.rx.RxSchedulers
 import com.chao.mvvm.stateview.StateConstants
 import com.chao.wanmvvm.config.Constants
-import com.chao.wanmvvm.model.BaseRepository
-import com.chao.wanmvvm.model.bean.chapter.ChapterListResult
-import com.chao.wanmvvm.model.bean.chapter.ChaptersResult
+import com.chao.wanmvvm.mvvm.model.BaseRepository
+import com.chao.wanmvvm.mvvm.model.bean.chapter.ChapterListResult
+import com.chao.wanmvvm.mvvm.model.bean.chapter.ChaptersResult
 import com.chao.wanmvvm.network.RxSubscriber
 
 /**

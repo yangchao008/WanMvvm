@@ -1,4 +1,4 @@
-package com.chao.wanmvvm.view.chapter
+package com.chao.wanmvvm.mvvm.view.chapter
 
 import android.arch.lifecycle.Observer
 import android.os.Bundle
@@ -9,9 +9,9 @@ import com.chad.library.adapter.base.BaseViewHolder
 import com.chao.mvvm.baseui.BaseListSimpleFragment
 import com.chao.wanmvvm.R
 import com.chao.wanmvvm.config.Constants
-import com.chao.wanmvvm.model.bean.chapter.ChapterListResult
-import com.chao.wanmvvm.model.bean.chapter.DatasItem
-import com.chao.wanmvvm.viewmodel.ChapterViewModel
+import com.chao.wanmvvm.mvvm.model.bean.chapter.ChapterListResult
+import com.chao.wanmvvm.mvvm.model.bean.chapter.DatasItem
+import com.chao.wanmvvm.mvvm.viewmodel.ChapterViewModel
 import zqx.rj.com.mvvm.common.showShortToast
 import zqx.rj.com.mvvm.common.toHtml
 
@@ -25,7 +25,7 @@ class ChapterListSimpleFragment : BaseListSimpleFragment<ChapterViewModel>(){
     companion object {
         private const val CHAPTER_ID = "chapter_id"
 
-        fun newInstance(chapterId: String):ChapterListSimpleFragment{
+        fun newInstance(chapterId: String): ChapterListSimpleFragment {
             val fragment = ChapterListSimpleFragment()
             var bundle = Bundle()
             bundle.putString(CHAPTER_ID,chapterId)
@@ -51,7 +51,8 @@ class ChapterListSimpleFragment : BaseListSimpleFragment<ChapterViewModel>(){
         arguments?.apply {
             chapterId = arguments!!.getString(CHAPTER_ID)
         }
-        registerObserver(Constants.EVENT_KEY_CHAPTER_LIST,chapterId,ChapterListResult::class.java)
+        registerObserver(Constants.EVENT_KEY_CHAPTER_LIST,chapterId,
+            ChapterListResult::class.java)
             .observe(this, Observer<ChapterListResult>{
                     when{
                         it?.data?.datas != null && it?.data?.datas!!.isNotEmpty() -> setData(it?.data.datas)

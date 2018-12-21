@@ -1,11 +1,11 @@
-package com.chao.wanmvvm.view.chapter.holder
+package com.chao.wanmvvm.mvvm.view.chapter.holder
 
 import android.content.Context
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.chao.wanmvvm.R
-import com.chao.wanmvvm.model.bean.chapter.DatasItem
+import com.chao.wanmvvm.mvvm.model.bean.chapter.DatasItem
 import com.chao.wanmvvm.utils.DisplayUtil
 import com.trecyclerview.holder.AbsHolder
 import com.trecyclerview.holder.AbsItemHolder
@@ -29,7 +29,7 @@ class ChapterItemHolder(context: Context) : AbsItemHolder<DatasItem, ChapterItem
     }
 
 
-    override fun onBindViewHolder(holder: ChapterItemHolder.ViewHolder, item: DatasItem) {
+    override fun onBindViewHolder(holder: ViewHolder, item: DatasItem) {
         holder?.apply {
             mTvAuthor.text = item?.author
             mTvTitle.text = item?.title?.toHtml()

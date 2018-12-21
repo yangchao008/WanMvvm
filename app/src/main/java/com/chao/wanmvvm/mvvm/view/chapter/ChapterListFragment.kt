@@ -1,4 +1,4 @@
-package com.chao.wanmvvm.view.chapter
+package com.chao.wanmvvm.mvvm.view.chapter
 
 import android.arch.lifecycle.Observer
 import android.os.Bundle
@@ -7,8 +7,8 @@ import android.support.v7.widget.RecyclerView
 import com.chao.mvvm.baseui.BaseListFragment
 import com.chao.wanmvvm.config.AdapterPool
 import com.chao.wanmvvm.config.Constants
-import com.chao.wanmvvm.model.bean.chapter.ChapterListResult
-import com.chao.wanmvvm.viewmodel.ChapterViewModel
+import com.chao.wanmvvm.mvvm.model.bean.chapter.ChapterListResult
+import com.chao.wanmvvm.mvvm.viewmodel.ChapterViewModel
 import com.trecyclerview.adapter.DelegateAdapter
 import zqx.rj.com.mvvm.common.showShortToast
 
@@ -22,7 +22,7 @@ class ChapterListFragment : BaseListFragment<ChapterViewModel>(){
     companion object {
         private const val CHAPTER_ID = "chapter_id"
 
-        fun newInstance(chapterId: String):ChapterListFragment{
+        fun newInstance(chapterId: String): ChapterListFragment {
             val fragment = ChapterListFragment()
             var bundle = Bundle()
             bundle.putString(CHAPTER_ID,chapterId)
@@ -48,7 +48,8 @@ class ChapterListFragment : BaseListFragment<ChapterViewModel>(){
         arguments?.apply {
             chapterId = arguments!!.getString(CHAPTER_ID)
         }
-        registerObserver(Constants.EVENT_KEY_CHAPTER_LIST,chapterId,ChapterListResult::class.java)
+        registerObserver(Constants.EVENT_KEY_CHAPTER_LIST,chapterId,
+            ChapterListResult::class.java)
             .observe(this, Observer<ChapterListResult>{
                     when{
                         it?.data?.datas != null && it?.data?.datas!!.isNotEmpty() -> setData(it?.data.datas)

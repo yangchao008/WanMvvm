@@ -1,4 +1,4 @@
-package com.chao.wanmvvm.model
+package com.chao.wanmvvm.mvvm.model
 
 import com.chao.mvvm.base.AbsRepository
 import com.chao.mvvm.event.LiveBus

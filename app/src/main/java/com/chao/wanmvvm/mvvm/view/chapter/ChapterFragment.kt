@@ -1,4 +1,4 @@
-package com.chao.wanmvvm.view.chapter
+package com.chao.wanmvvm.mvvm.view.chapter
 
 import android.arch.lifecycle.Observer
 import android.os.Bundle
@@ -6,8 +6,8 @@ import com.chao.mvvm.base.BaseFragment
 import com.chao.mvvm.baseui.BaseViewPagerFragment
 import com.chao.wanmvvm.R
 import com.chao.wanmvvm.config.Constants
-import com.chao.wanmvvm.model.bean.chapter.ChaptersResult
-import com.chao.wanmvvm.viewmodel.ChapterViewModel
+import com.chao.wanmvvm.mvvm.model.bean.chapter.ChaptersResult
+import com.chao.wanmvvm.mvvm.viewmodel.ChapterViewModel
 
 /**
  * Date: 2018/12/4 14:20
@@ -32,7 +32,7 @@ class ChapterFragment : BaseViewPagerFragment<ChapterViewModel>(){
     }
 
     override fun dataObserver() {
-        registerObserver(Constants.EVENT_KEY_CHAPTER,ChaptersResult::class.java)
+        registerObserver(Constants.EVENT_KEY_CHAPTER, ChaptersResult::class.java)
             .observe(this, Observer<ChaptersResult> {
                 when{
                     it?.data != null && it!!.data!!.isNotEmpty() -> setData(it!!)

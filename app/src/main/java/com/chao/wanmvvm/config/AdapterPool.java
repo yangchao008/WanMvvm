@@ -1,8 +1,8 @@
 package com.chao.wanmvvm.config;
 
 import android.content.Context;
-import com.chao.wanmvvm.model.bean.chapter.DatasItem;
-import com.chao.wanmvvm.view.chapter.holder.ChapterItemHolder;
+import com.chao.wanmvvm.mvvm.model.bean.chapter.DatasItem;
+import com.chao.wanmvvm.mvvm.view.chapter.holder.ChapterItemHolder;
 import com.trecyclerview.adapter.DelegateAdapter;
 import com.trecyclerview.footview.FootViewHolder;
 import com.trecyclerview.headview.HeaderViewHolder;

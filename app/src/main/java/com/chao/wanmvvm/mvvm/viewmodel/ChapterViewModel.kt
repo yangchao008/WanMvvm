@@ -1,8 +1,8 @@
-package com.chao.wanmvvm.viewmodel
+package com.chao.wanmvvm.mvvm.viewmodel
 
 import android.app.Application
 import com.chao.mvvm.base.AbsViewModel
-import com.chao.wanmvvm.model.repository.ChapterRepository
+import com.chao.wanmvvm.mvvm.model.repository.ChapterRepository
 
 /**
  * Date: 2018/12/4 13:04

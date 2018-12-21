@@ -8,7 +8,7 @@ import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.ashokvarma.bottomnavigation.BottomNavigationItem
 import com.chao.mvvm.base.BaseActivity
 import com.chao.mvvm.base.BlankFragment
-import com.chao.wanmvvm.view.chapter.ChapterFragment
+import com.chao.wanmvvm.mvvm.view.chapter.ChapterFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
