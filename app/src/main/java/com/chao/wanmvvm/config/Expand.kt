@@ -1,18 +1,31 @@
 package zqx.rj.com.mvvm.common
 
 import android.content.Context
+import android.support.v4.content.ContextCompat
 import android.text.Html
 import android.text.Html.FROM_HTML_MODE_COMPACT
 import android.view.View
+import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import com.chad.library.adapter.base.BaseViewHolder
 
 /**
  * author：  HyZhan
  * created： 2018/10/11 16:33
  * desc：    扩展方法
  */
+
+//扩展属性
+var TextView.leftMargin:Int
+    get():Int {
+        return (layoutParams as ViewGroup.MarginLayoutParams).leftMargin
+    }
+    set(value) {
+        (layoutParams as ViewGroup.MarginLayoutParams).leftMargin=value
+    }
 
 fun EditText.str(): String {
     return this.text.toString()
@@ -44,6 +57,17 @@ fun String.toHtml(): String {
 fun Context.showShortToast(msg: String) = Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
 
 fun Context.showLongToast(msg: String) = Toast.makeText(this,msg,Toast.LENGTH_LONG).show()
+
+fun Context.getMyColor(colorId: Int) = ContextCompat.getColor(this, colorId)
+
+fun BaseViewHolder.setTexts(texts: List<Pair<Int,String>>){
+    if (texts == null)
+        return throw Exception()
+
+    texts.forEach {
+        setText(it.first,it.second)
+    }
+}
 
 //fun ImageView.loadUrl(context: Context, url: String) {
 //
