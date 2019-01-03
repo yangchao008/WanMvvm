@@ -58,12 +58,11 @@ class ChapterListFragment : BaseListFragment<ChapterViewModel>(){
     }
 
     override fun createAdapter(): DelegateAdapter {
-        return AdapterPool.newInstance()
+        return AdapterPool
             .getChapterAdapter(activity!!)
             .setOnItemClickListener { view, i, any ->
                 activity!!.showShortToast("click item = $i")
-            }
-            .build()
+            }.build()
     }
 
     override fun getRemoteData() {
