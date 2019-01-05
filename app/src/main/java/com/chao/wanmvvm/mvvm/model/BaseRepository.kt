@@ -15,30 +15,25 @@ open class BaseRepository : AbsRepository() {
         RetrofitFactory.getInstance().create(ApiService::class.java)
     }
 
-    private fun sendData(eventKey: Any, t: Any) {
-        sendData(eventKey, null, t)
-    }
-
-    private fun sendData(eventKey: Any, tag: String?, t: Any) {
+    private fun sendData(eventKey: Any, t: Any, tag: String?= null) {
         LiveBus.getDefault().postEvent(eventKey, tag, t)
     }
 
-    fun showPageState(eventKey: Any, state: String) {
-        sendData(eventKey, state)
+    fun showPageState(eventKey: Any, state: String, tag: String?= null) {
+        sendData(eventKey, state, tag)
     }
 
-    private fun showPageState(eventKey: Any, tag: String, state: String) {
-        sendData(eventKey, tag, state)
+    fun sendSuccessData(eventKeyState: Any,eventKey: Any, t: Any, tag: String?= null) {
+        showPageState(eventKeyState, StateConstants.SUCCESS_STATE,tag)
+        sendData(eventKey,t,tag)
     }
 
-    fun sendSuccessData(eventKeyState: Any,eventKey: Any,t: Any) {
-        showPageState(eventKeyState, StateConstants.SUCCESS_STATE)
-        sendData(eventKey,t)
-    }
-
-    fun sendSuccessData(eventKeyState: Any,eventKey: Any, tag: String, t: Any) {
-        showPageState(eventKeyState,tag, StateConstants.SUCCESS_STATE)
-        sendData(eventKey,tag,t)
-    }
+//    fun showPageState(eventKeyState: Any, state: String = StateConstants.SUCCESS_STATE, tag: String?= null,
+//                      eventKey: Any?= null,t: Any?= null) {
+//        sendData(eventKeyState, state, tag)
+//        eventKey?.run {
+//            sendData(eventKey!!,t!!,tag)
+//        }
+//    }
 
 }

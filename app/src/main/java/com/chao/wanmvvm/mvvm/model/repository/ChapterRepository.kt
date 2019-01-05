@@ -24,6 +24,7 @@ class ChapterRepository : BaseRepository(){
                 }
 
                 override fun onSuccess(t: ChaptersResult) {
+//                    showPageState(Constants.EVENT_KEY_CHAPTER_STATE,eventKey=Constants.EVENT_KEY_CHAPTER,t= t)
                     sendSuccessData(Constants.EVENT_KEY_CHAPTER_STATE,Constants.EVENT_KEY_CHAPTER,t)
                 }
 
@@ -40,15 +41,17 @@ class ChapterRepository : BaseRepository(){
             .compose(RxSchedulers.io_main())
             .subscribeWith(object : RxSubscriber<ChapterListResult>(){
                 override fun onNoNetWork() {
-                    showPageState(Constants.EVENT_KEY_CHAPTER_LIST_STATE, StateConstants.NET_WORK_STATE)
+                    showPageState(Constants.EVENT_KEY_CHAPTER_LIST_STATE, StateConstants.NET_WORK_STATE,chapterId)
                 }
 
                 override fun onSuccess(t: ChapterListResult) {
-                    sendSuccessData(Constants.EVENT_KEY_CHAPTER_LIST_STATE,Constants.EVENT_KEY_CHAPTER_LIST,chapterId,t)
+//                    showPageState(Constants.EVENT_KEY_CHAPTER_LIST_STATE,eventKey= Constants.EVENT_KEY_CHAPTER_LIST,
+//                        tag= chapterId,t= t)
+                    sendSuccessData(Constants.EVENT_KEY_CHAPTER_LIST_STATE,Constants.EVENT_KEY_CHAPTER_LIST,t,chapterId)
                 }
 
                 override fun onFailure(msg: String?) {
-                    showPageState(Constants.EVENT_KEY_CHAPTER_LIST_STATE, StateConstants.ERROR_STATE)
+                    showPageState(Constants.EVENT_KEY_CHAPTER_LIST_STATE, StateConstants.ERROR_STATE,chapterId)
                 }
             }))
     }
