@@ -7,8 +7,14 @@ package com.chao.wanmvvm.config
  */
 object URL {
 
-    const val BASE_URL = "http://wanandroid.com/wxarticle/"
-    const val HOME_CHAPTER = "chapters/json"
-    const val HOME_CHAPTER_LIST = "list/{chapterId}/{page}/json"
+    const val BASE_URL = "https://www.wanandroid.com/"
+
+    private const val WX_ARTICLE = "wxarticle/"
+    const val HOME_CHAPTER = "${WX_ARTICLE}chapters/json"
+    const val HOME_CHAPTER_LIST = "${WX_ARTICLE}list/{chapterId}/{page}/json"
+
+    private const val USER = "user/"
+    const val USER_LOGIN = "${USER}login"
+    const val USER_REGISTER = "${USER}register"
 
 }

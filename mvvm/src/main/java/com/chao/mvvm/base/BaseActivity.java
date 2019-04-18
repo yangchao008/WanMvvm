@@ -60,7 +60,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      *
      * @param savedInstanceState
      */
-    public abstract void initViews(Bundle savedInstanceState);
+    public void initViews(Bundle savedInstanceState){};
 
     /**
      * 初始化toolbar

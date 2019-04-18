@@ -5,12 +5,13 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.chao.mvvm.baseui.BaseListFragment
+import com.chao.wanmvvm.ScrollingActivity
 import com.chao.wanmvvm.config.AdapterPool
 import com.chao.wanmvvm.config.Constants
 import com.chao.wanmvvm.mvvm.model.bean.chapter.ChapterListResult
 import com.chao.wanmvvm.mvvm.viewmodel.ChapterViewModel
 import com.trecyclerview.adapter.DelegateAdapter
-import zqx.rj.com.mvvm.common.showShortToast
+import zqx.rj.com.mvvm.common.startToActivity
 
 /**
  * Date: 2018/12/4 14:53
@@ -61,7 +62,8 @@ class ChapterListFragment : BaseListFragment<ChapterViewModel>(){
         return AdapterPool
             .getChapterAdapter(activity!!)
             .setOnItemClickListener { view, i, any ->
-                activity!!.showShortToast("click item = $i")
+//                activity!!.showShortToast("click item = $i")
+                activity?.startToActivity(ScrollingActivity::class.java)
             }.build()
     }
 

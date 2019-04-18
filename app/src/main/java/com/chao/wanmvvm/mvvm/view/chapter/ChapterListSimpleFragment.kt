@@ -8,11 +8,12 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.chao.mvvm.baseui.BaseListSimpleFragment
 import com.chao.wanmvvm.R
+import com.chao.wanmvvm.ScrollingActivity
 import com.chao.wanmvvm.config.Constants
 import com.chao.wanmvvm.mvvm.model.bean.chapter.ChapterListResult
 import com.chao.wanmvvm.mvvm.model.bean.chapter.DatasItem
 import com.chao.wanmvvm.mvvm.viewmodel.ChapterViewModel
-import zqx.rj.com.mvvm.common.showShortToast
+import zqx.rj.com.mvvm.common.startToActivity
 import zqx.rj.com.mvvm.common.toHtml
 
 /**
@@ -63,7 +64,8 @@ class ChapterListSimpleFragment : BaseListSimpleFragment<ChapterViewModel>(){
     override fun createAdapter(): BaseQuickAdapter<DatasItem,BaseViewHolder> {
         var adapter = MyAdapter(R.layout.article_item)
         adapter.setOnItemClickListener { adapter, view, position ->
-            activity!!.showShortToast("点击 = $position")
+//            activity!!.showShortToast("点击 = $position")
+            activity?.startToActivity(ScrollingActivity::class.java)
         }
         return adapter
     }

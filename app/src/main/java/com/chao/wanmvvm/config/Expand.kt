@@ -1,6 +1,7 @@
 package zqx.rj.com.mvvm.common
 
 import android.content.Context
+import android.content.Intent
 import android.support.v4.content.ContextCompat
 import android.text.Html
 import android.text.Html.FROM_HTML_MODE_COMPACT
@@ -67,6 +68,10 @@ fun BaseViewHolder.setTexts(texts: List<Pair<Int,String>>){
     texts.forEach {
         setText(it.first,it.second)
     }
+}
+
+fun Context.startToActivity(c: Class<*>){
+    startActivity(Intent(this,c))
 }
 
 //fun ImageView.loadUrl(context: Context, url: String) {
