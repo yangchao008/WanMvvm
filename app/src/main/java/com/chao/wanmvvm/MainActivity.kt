@@ -32,6 +32,7 @@ class MainActivity : BaseActivity() {
     override fun initViews(savedInstanceState: Bundle?) {
         mLoadManager.showSuccess()
         mNestedViewPager.apply {
+
             adapter = MyFragmentPagerAdapter(supportFragmentManager)
             currentItem = 0
             isLocked = true
