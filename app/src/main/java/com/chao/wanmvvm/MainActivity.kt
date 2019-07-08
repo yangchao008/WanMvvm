@@ -26,6 +26,7 @@ class MainActivity : BaseActivity() {
         BlankFragment())
 
     override fun getLayoutId(): Int {
+
         return R.layout.activity_main
     }
 
