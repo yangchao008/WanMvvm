@@ -54,7 +54,6 @@ class App : Application(), ComponentCallbacks2 {
 
     companion object {
         var mInstance: App? = null
-
         fun instance(): App = mInstance!!
     }
 }
