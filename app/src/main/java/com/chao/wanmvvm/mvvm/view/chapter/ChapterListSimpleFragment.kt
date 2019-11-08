@@ -79,7 +79,7 @@ class ChapterListSimpleFragment : BaseListSimpleFragment<ChapterViewModel>(){
         getRemoteData()
     }
 
-    inner class MyAdapter(resId: Int) : BaseQuickAdapter<DatasItem, BaseViewHolder>(resId){
+    class MyAdapter(resId: Int) : BaseQuickAdapter<DatasItem, BaseViewHolder>(resId){
         override fun convert(helper: BaseViewHolder?, item: DatasItem?) {
             helper?.apply {
                 with(item!!){

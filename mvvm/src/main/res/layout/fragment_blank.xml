@@ -10,7 +10,7 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:max="100"
-            android:progress="70"
+            android:progress="20"
             android:progressDrawable="@drawable/progressbar_style" />
 
 </LinearLayout>

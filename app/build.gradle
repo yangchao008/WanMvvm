@@ -4,11 +4,13 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.chao.wanmvvm"
-        minSdkVersion 15
+        minSdkVersion 17
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -56,6 +58,8 @@ android {
             println "上传结束 "
         }
     }
+
+
 }
 
 kotlin {
@@ -66,12 +70,52 @@ kotlin {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':mvvm')
+    implementation project(':libdownload')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation project(':mvvm')
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1'
 
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.22.5'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:0.22.5'
+
+
+// Use if Kotlin user.
+    kapt "com.github.agrosner.dbflow:processor:${dbflow_version}"
+
+// Annotation Processor
+// if only using Java, use this. If using Kotlin do NOT use this.
+//    annotationProcessor "com.github.agrosner.dbflow:processor:${dbflow_version}"
+
+// core set of libraries
+    implementation "com.github.agrosner.dbflow:core:${dbflow_version}"
+    implementation "com.github.agrosner.dbflow:lib:${dbflow_version}"
+
+      // sql-cipher database encryption (optional)
+    implementation "com.github.agrosner.dbflow:sqlcipher:${dbflow_version}"
+//    implementation "net.zetetic:android-database-sqlcipher:${sqlcipher_version}@aar"
+
+    // DBFlow for kotlin
+    api "com.github.Raizlabs.DBFlow:dbflow-kotlinextensions:${dbflow_version}@aar"
+
+      // RXJava 2 support
+//    implementation "com.github.agrosner.dbflow:reactive-streams:${dbflow_version}"
+      // Kotlin Coroutines
+//    implementation "com.github.agrosner.dbflow:coroutines:${dbflow_version}"
+
+      // Android Architecture Components Paging Library Support
+//    implementation "com.github.agrosner.dbflow:paging:${dbflow_version}"
+
+      // adds generated content provider annotations + support.
+//    implementation "com.github.agrosner.dbflow:contentprovider:${dbflow_version}"
+
+      // DBFlow for RXJava2
+//    api "com.github.Raizlabs.DBFlow:dbflow-rx2:${dbflow_version}"
+
+    // RXJava2 optional, for use with Kotlin as a nice companion.
+    // DBFlow for kotlin RXJava2
+//    api "com.github.Raizlabs.DBFlow:dbflow-rx2-kotlinextensions:${dbflow_version}"
+
 }

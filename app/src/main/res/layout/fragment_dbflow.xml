@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                app:layout_constraintTop_toTopOf="parent">
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="名字："/>
+            <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etName"
+                    android:layout_width="@dimen/dp_72"
+                    android:layout_height="wrap_content"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:text="年龄："/>
+            <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etAge"
+                    android:layout_width="@dimen/dp_40"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"/>
+            <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+            <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保存"/>
+            <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnSeeAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看全部"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                app:layout_constraintTop_toTopOf="parent">
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="名字："/>
+            <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etNameSearch"
+                    android:layout_width="@dimen/dp_72"
+                    android:layout_height="wrap_content"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:text="年龄："/>
+            <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etAgeSearch"
+                    android:layout_width="@dimen/dp_40"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"/>
+            <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+            <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="搜索"/>
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:overScrollMode="never"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,9 +1,10 @@
 package com.chao.mvvm.glide;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.GlideBuilder;
-import com.bumptech.glide.load.DecodeFormat;
+import com.bumptech.glide.Registry;
 import com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool;
 import com.bumptech.glide.load.engine.cache.InternalCacheDiskCacheFactory;
 import com.bumptech.glide.load.engine.cache.LruResourceCache;
@@ -26,11 +27,11 @@ public class GlideConfig implements GlideModule {
         builder.setDiskCache(new InternalCacheDiskCacheFactory(context, MAX_CACHE_DISK_SIZE));
         builder.setMemoryCache(new LruResourceCache(MAX_CACHE_MEMORY_SIZE));
         builder.setBitmapPool(new LruBitmapPool(MAX_CACHE_MEMORY_SIZE));
-        builder.setDecodeFormat(DecodeFormat.PREFER_RGB_565);
+//        builder.setDecodeFormat(DecodeFormat.PREFER_RGB_565);
     }
 
     @Override
-    public void registerComponents(Context context, Glide glide) {
+    public void registerComponents(@NonNull Context context, @NonNull Glide glide, @NonNull Registry registry) {
 
     }
 }
