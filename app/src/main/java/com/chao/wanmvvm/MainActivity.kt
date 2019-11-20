@@ -21,7 +21,7 @@ class MainActivity : BaseActivity() {
     val mFragments = listOf(
         ChapterFragment(),
         CssFragment(),
-        DBFlowFragment(),
+        BlankFragment(),
         BlankFragment(),
         BlankFragment())
 

@@ -1,6 +1,6 @@
 package com.chao.wanmvvm
 
-import com.dbflow5.annotation.Database
+//import com.dbflow5.annotation.Database
 
 
 /**
@@ -8,13 +8,13 @@ import com.dbflow5.annotation.Database
  * Author: hans yang
  * Description:
  */
-@Database(name = AppKotlinDatabase.NAME, version = AppKotlinDatabase.VERSION)
-class AppKotlinDatabase {
-
-    companion object{
-        //数据库名称
-        const val NAME = "AppKotlinDatabase"
-        //数据库版本号
-        const val VERSION = 1
-    }
-}
+//@Database(name = AppKotlinDatabase.NAME, version = AppKotlinDatabase.VERSION)
+//class AppKotlinDatabase {
+//
+//    companion object{
+//        //数据库名称
+//        const val NAME = "AppKotlinDatabase"
+//        //数据库版本号
+//        const val VERSION = 1
+//    }
+//}

@@ -9,7 +9,6 @@ import com.chao.mvvm.http.RetrofitFactory
 import com.chao.mvvm.stateview.ErrorState
 import com.chao.mvvm.stateview.LoadingState
 import com.chao.wanmvvm.config.URL
-import com.raizlabs.android.dbflow.config.FlowManager
 import com.tqzhang.stateview.core.LoadState
 
 /**
@@ -26,7 +25,6 @@ class App : Application(), ComponentCallbacks2 {
 
     override fun onCreate() {
         super.onCreate()
-        FlowManager.init(this)
         mInstance = this
         RetrofitFactory.Builder(this)
             .initOkHttp()

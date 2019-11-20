@@ -83,22 +83,22 @@ dependencies {
 
 
 // Use if Kotlin user.
-    kapt "com.github.agrosner.dbflow:processor:${dbflow_version}"
+//    kapt "com.github.agrosner.dbflow:processor:${dbflow_version}"
 
 // Annotation Processor
 // if only using Java, use this. If using Kotlin do NOT use this.
 //    annotationProcessor "com.github.agrosner.dbflow:processor:${dbflow_version}"
 
 // core set of libraries
-    implementation "com.github.agrosner.dbflow:core:${dbflow_version}"
-    implementation "com.github.agrosner.dbflow:lib:${dbflow_version}"
+//    implementation "com.github.agrosner.dbflow:core:${dbflow_version}"
+//    implementation "com.github.agrosner.dbflow:lib:${dbflow_version}"
 
       // sql-cipher database encryption (optional)
-    implementation "com.github.agrosner.dbflow:sqlcipher:${dbflow_version}"
+//    implementation "com.github.agrosner.dbflow:sqlcipher:${dbflow_version}"
 //    implementation "net.zetetic:android-database-sqlcipher:${sqlcipher_version}@aar"
 
     // DBFlow for kotlin
-    api "com.github.Raizlabs.DBFlow:dbflow-kotlinextensions:${dbflow_version}@aar"
+//    api "com.github.Raizlabs.DBFlow:dbflow-kotlinextensions:${dbflow_version}@aar"
 
       // RXJava 2 support
 //    implementation "com.github.agrosner.dbflow:reactive-streams:${dbflow_version}"
