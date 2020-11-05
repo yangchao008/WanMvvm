@@ -6,6 +6,7 @@ package com.chao.wanmvvm
  * Author: hans yang
  * Description:
  */
+
 //@Table(database = AppKotlinDatabase::class)
 //data class Person(@Column var name: String? = null,
 //                  @Column var age: Int = 0,
